@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Blog 6 - DOM trong JavaScript</title>
+    <meta
+      name="description"
+      content="Tìm hiểu Document Object Model (DOM) trong JavaScript và cách thao tác với phần tử HTML."
+    />
+    <meta name="keywords" content="JavaScript, DOM, Lập trình web" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&family=Raleway:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body class="portfolio-details-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <h1 class="sitename">Lập trình Java & JavaScript</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="blogs.html">Trang chủ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title" data-aos="fade">
+        <div
+          class="container d-lg-flex justify-content-between align-items-center"
+        >
+          <h1 class="mb-2 mb-lg-0">DOM trong JavaScript</h1>
+          <nav class="breadcrumbs">
+            <ol>
+              <li><a href="index.html">Trang chủ</a></li>
+              <li class="current">Blog 6</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <!-- End Page Title -->
+
+      <!-- Blog Details Section -->
+      <section id="portfolio-details" class="portfolio-details section">
+        <div class="container" data-aos="fade-up">
+          <div class="row justify-content-between gy-4 mt-4">
+            <div class="col-lg-8" data-aos="fade-up">
+              <div class="portfolio-description">
+                <h2>DOM là gì?</h2>
+
+                <p>
+                  DOM (Document Object Model) là một mô hình dạng cây (tree
+                  structure) biểu diễn cấu trúc của tài liệu HTML hoặc XML. Nói
+                  cách khác, DOM giúp trình duyệt hiểu và quản lý nội dung của
+                  trang web dưới dạng các đối tượng mà JavaScript có thể truy
+                  cập và thao tác.
+                </p>
+
+                <p>
+                  Mỗi thành phần trên trang web – như thẻ
+                  <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>,
+                  <code>&lt;img&gt;</code>, hay thậm chí cả văn bản và thuộc
+                  tính – đều được biểu diễn dưới dạng một “node” trong cây DOM.
+                  Nhờ vậy, lập trình viên có thể dùng JavaScript để thêm, xóa,
+                  thay đổi hoặc xử lý các phần tử đó theo ý muốn.
+                </p>
+
+                <h3>Cấu trúc của DOM</h3>
+                <p>
+                  Cấu trúc của DOM bắt đầu từ nút gốc (root node) là
+                  <strong>document</strong>. Từ đó, các phần tử con được sắp xếp
+                  theo cấp bậc như một cây:
+                </p>
+
+                <pre><code class="language-html">
+document
+ └── html
+     ├── head
+     │   └── title
+     └── body
+         ├── h1
+         └── p
+          </code></pre>
+
+                <p>
+                  Khi hiểu mô hình này, bạn có thể dễ dàng di chuyển qua các
+                  phần tử bằng các thuộc tính như <code>parentNode</code>,
+                  <code>childNodes</code> hay <code>nextElementSibling</code>.
+                </p>
+
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>
+                      “Nắm vững DOM giúp tôi làm chủ cách trang web phản hồi với
+                      người dùng và tạo ra những trải nghiệm tương tác mượt mà,
+                      tự nhiên.”
+                    </span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <div>
+                    <img
+                      src="assets/img/avatar-blog.jpg"
+                      class="testimonial-img"
+                      alt=""
+                    />
+                    <h3>Dương Tuấn Khang</h3>
+                    <h4>Lập trình viên Java</h4>
+                  </div>
+                </div>
+
+                <h3>Các thao tác phổ biến với DOM</h3>
+                <p>
+                  Khi làm việc với DOM, có một số thao tác cơ bản mà bạn sẽ sử
+                  dụng thường xuyên:
+                </p>
+
+                <ul>
+                  <li>
+                    <strong>Truy cập phần tử:</strong> Sử dụng
+                    <code>document.getElementById()</code>,
+                    <code>document.querySelector()</code> hoặc
+                    <code>getElementsByClassName()</code> để lấy phần tử cần
+                    chỉnh sửa.
+                  </li>
+                  <li>
+                    <strong>Thay đổi nội dung:</strong> Dùng
+                    <code>element.textContent</code> hoặc
+                    <code>element.innerHTML</code> để thay đổi nội dung hiển
+                    thị.
+                  </li>
+                  <li>
+                    <strong>Thêm hoặc xóa phần tử:</strong> Dùng
+                    <code>createElement()</code>,
+                    <code>appendChild()</code> hoặc <code>remove()</code> để cập
+                    nhật cấu trúc DOM.
+                  </li>
+                  <li>
+                    <strong>Xử lý sự kiện:</strong> Gắn sự kiện cho phần tử với
+                    <code>addEventListener()</code> để lắng nghe thao tác người
+                    dùng như nhấn nút hoặc nhập dữ liệu.
+                  </li>
+                </ul>
+
+                <h3>Ví dụ minh họa</h3>
+                <p>
+                  Ví dụ đơn giản dưới đây minh họa cách JavaScript có thể thao
+                  tác với DOM để thay đổi nội dung của một phần tử HTML:
+                </p>
+
+                <pre><code class="language-html">
+&lt;h2 id="title"&gt;Xin chào!&lt;/h2&gt;
+&lt;button onclick="changeText()"&gt;Thay đổi nội dung&lt;/button&gt;
+
+&lt;script&gt;
+function changeText() {
+  const element = document.getElementById("title");
+  element.textContent = "Chào mừng bạn đến với DOM!";
+}
+&lt;/script&gt;
+          </code></pre>
+
+                <p>
+                  Khi người dùng nhấn vào nút, nội dung của thẻ
+                  <code>&lt;h2&gt;</code> sẽ thay đổi ngay lập tức. Đây chính là
+                  ví dụ cơ bản về cách DOM giúp tạo nên tính tương tác động cho
+                  trang web.
+                </p>
+
+                <h3>DOM và các Framework hiện đại</h3>
+                <p>
+                  DOM là nền tảng cho hầu hết các framework và thư viện frontend
+                  hiện nay. Ví dụ:
+                </p>
+
+                <ul>
+                  <li>
+                    <strong>React:</strong> sử dụng <em>Virtual DOM</em> để tối
+                    ưu tốc độ hiển thị.
+                  </li>
+                  <li>
+                    <strong>Vue.js:</strong> cung cấp cú pháp dễ hiểu để tương
+                    tác với DOM mà không cần viết nhiều code.
+                  </li>
+                  <li>
+                    <strong>Angular:</strong> quản lý DOM thông qua cơ chế
+                    <em>data binding</em> và <em>component</em>.
+                  </li>
+                </ul>
+
+                <p>
+                  Vì vậy, nếu bạn hiểu sâu cách DOM hoạt động, việc học và làm
+                  chủ các framework frontend hiện đại sẽ dễ dàng hơn rất nhiều.
+                </p>
+
+                <h3>Kết luận</h3>
+                <p>
+                  DOM là cầu nối giữa HTML và JavaScript – là nền tảng giúp
+                  trang web trở nên sống động và phản hồi với người dùng. Việc
+                  thành thạo DOM là kỹ năng cơ bản nhưng cực kỳ quan trọng đối
+                  với mọi lập trình viên web.
+                </p>
+
+                <p>
+                  Hãy bắt đầu bằng việc luyện tập các thao tác như thêm, xóa
+                  phần tử, thay đổi nội dung, và gắn sự kiện cho các nút trên
+                  trang. Khi đã quen thuộc, bạn sẽ dễ dàng tạo ra các hiệu ứng
+                  phức tạp và giao diện tương tác chuyên nghiệp hơn.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="portfolio-info">
+                <h3>Thông tin bài viết</h3>
+                <ul>
+                  <li><strong>Chủ đề:</strong> DOM trong JavaScript</li>
+                  <li><strong>Tác giả:</strong> Blog Lập trình</li>
+                  <li><strong>Ngày đăng:</strong> 06 Tháng 10, 2025</li>
+                  <a href="blogs.html" class="btn-visit align-self-start"
+                    >Đọc thêm</a
+                  >
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- /Blog Details Section -->
+    </main>
+
+    <footer id="footer" class="footer accent-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Bản quyền</span>
+            <strong class="px-1 sitename">Dương Tuấn Khang</strong>
+            <span></span>
+          </p>
+        </div>
+        <div class="social-links d-flex justify-content-center">
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+    >
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

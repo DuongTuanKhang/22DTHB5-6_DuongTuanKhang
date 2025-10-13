@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Blog 9 - Angular Framework</title>
+    <meta
+      name="description"
+      content="Khám phá Angular - framework mạnh mẽ của Google để xây dựng ứng dụng web động và hiện đại."
+    />
+    <meta name="keywords" content="Angular, JavaScript, Framework, Frontend" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&family=Raleway:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body class="portfolio-details-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <h1 class="sitename">Lập trình Java & JavaScript</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="blogs.html">Trang chủ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title" data-aos="fade">
+        <div
+          class="container d-lg-flex justify-content-between align-items-center"
+        >
+          <h1 class="mb-2 mb-lg-0">Angular Framework</h1>
+          <nav class="breadcrumbs">
+            <ol>
+              <li><a href="index.html">Trang chủ</a></li>
+              <li class="current">Blog 9</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <!-- End Page Title -->
+
+      <!-- Blog Details Section -->
+      <section id="portfolio-details" class="portfolio-details section">
+        <div class="container" data-aos="fade-up">
+          <div class="row justify-content-between gy-4 mt-4">
+            <div class="col-lg-8" data-aos="fade-up">
+              <div class="portfolio-description">
+                <h2>Angular là gì?</h2>
+
+                <p>
+                  <strong>Angular</strong> là một framework frontend mã nguồn mở
+                  do <strong>Google</strong> phát triển, được thiết kế để xây
+                  dựng các ứng dụng web động, mạnh mẽ và có khả năng mở rộng
+                  cao. Với kiến trúc dựa trên <em>component</em> và ngôn ngữ
+                  <strong>TypeScript</strong>, Angular giúp lập trình viên tạo
+                  ra những ứng dụng web hiện đại, có cấu trúc rõ ràng và dễ bảo
+                  trì.
+                </p>
+
+                <p>
+                  Không giống như các thư viện chỉ tập trung vào giao diện như
+                  React.js, Angular là một <strong>framework toàn diện</strong>.
+                  Nó bao gồm sẵn nhiều tính năng mạnh mẽ như quản lý form,
+                  routing, xử lý HTTP, và kiểm thử tự động. Điều này giúp bạn
+                  xây dựng một ứng dụng hoàn chỉnh mà không cần cài thêm quá
+                  nhiều thư viện bên ngoài.
+                </p>
+
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>
+                      “Angular giúp tôi tạo ra các ứng dụng web có cấu trúc rõ
+                      ràng, dễ mở rộng và tối ưu trải nghiệm người dùng.”
+                    </span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <div>
+                    <img
+                      src="assets/img/avatar-blog.jpg"
+                      class="testimonial-img"
+                      alt=""
+                    />
+                    <h3>Dương Tuấn Khang</h3>
+                    <h4>Lập trình viên Java</h4>
+                  </div>
+                </div>
+
+                <p>
+                  Angular hoạt động dựa trên mô hình
+                  <strong>Component-Based Architecture</strong>. Mỗi phần tử
+                  trong giao diện — như thanh điều hướng, form đăng nhập, hay
+                  danh sách sản phẩm — đều được xây dựng dưới dạng một component
+                  độc lập. Điều này giúp tái sử dụng mã nguồn và tách biệt rõ
+                  ràng các phần của ứng dụng.
+                </p>
+
+                <p>Dưới đây là ví dụ cơ bản về một component trong Angular:</p>
+
+                <pre><code>
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-hello',
+  template: '&lt;h2&gt;Xin chào, Angular!&lt;/h2&gt;'
+})
+export class HelloComponent {}
+          </code></pre>
+
+                <p>
+                  Angular hỗ trợ <strong>data binding</strong> – cơ chế giúp dữ
+                  liệu trong component và giao diện luôn đồng bộ. Khi dữ liệu
+                  thay đổi, giao diện cũng tự động cập nhật mà không cần thao
+                  tác DOM thủ công.
+                </p>
+
+                <p>
+                  Một điểm mạnh khác là cơ chế
+                  <strong>Dependency Injection (DI)</strong> – giúp quản lý và
+                  tái sử dụng các dịch vụ (service) dễ dàng. DI giúp ứng dụng
+                  Angular trở nên linh hoạt, mở rộng tốt và dễ kiểm thử hơn.
+                </p>
+
+                <p>
+                  Ngoài ra, Angular có các <strong>lifecycle hooks</strong> như
+                  <code>ngOnInit()</code>, <code>ngOnChanges()</code>,
+                  <code>ngOnDestroy()</code>, cho phép bạn can thiệp vào vòng
+                  đời của component, kiểm soát logic hiển thị và hiệu năng.
+                </p>
+
+                <p>
+                  Với hệ thống CLI mạnh mẽ, Angular hỗ trợ tạo project, module,
+                  và component chỉ bằng vài lệnh đơn giản. Ví dụ:
+                </p>
+
+                <pre><code>
+ng new my-app
+cd my-app
+ng generate component Trang chủ
+ng serve
+          </code></pre>
+
+                <p>Angular còn tích hợp sẵn các tính năng hữu ích như:</p>
+
+                <ul>
+                  <li><strong>Routing</strong> – điều hướng giữa các trang.</li>
+                  <li>
+                    <strong>Form Validation</strong> – xác thực dữ liệu người
+                    dùng.
+                  </li>
+                  <li>
+                    <strong>HttpClient</strong> – giao tiếp với API backend.
+                  </li>
+                  <li>
+                    <strong>RxJS</strong> – xử lý dữ liệu bất đồng bộ mạnh mẽ.
+                  </li>
+                </ul>
+
+                <p>
+                  So với React hay Vue, Angular mang tính “enterprise” cao hơn,
+                  phù hợp cho các ứng dụng lớn cần cấu trúc chặt chẽ và độ ổn
+                  định cao. Nhiều doanh nghiệp lớn như Google, Microsoft,
+                  Samsung, và IBM đang sử dụng Angular cho các sản phẩm của họ.
+                </p>
+
+                <p>
+                  Nếu bạn hướng tới con đường lập trình viên frontend chuyên
+                  nghiệp, Angular là lựa chọn tuyệt vời. Việc nắm vững
+                  TypeScript, component, service, và routing trong Angular sẽ
+                  giúp bạn tự tin xây dựng những ứng dụng web hiện đại và mạnh
+                  mẽ.
+                </p>
+
+                <p>
+                  Hãy bắt đầu học Angular bằng cách cài đặt CLI, tạo project đầu
+                  tiên, và khám phá các khái niệm cơ bản. Khi đã quen thuộc, bạn
+                  có thể kết hợp Angular với backend Node.js hoặc Spring Boot để
+                  xây dựng hệ thống fullstack hoàn chỉnh.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="portfolio-info">
+                <h3>Thông tin bài viết</h3>
+                <ul>
+                  <li><strong>Chủ đề</strong> Angular Framework</li>
+                  <li><strong>Tác giả</strong> Blog Lập trình</li>
+                  <li><strong>Ngày đăng</strong> 09 Tháng 10, 2025</li>
+                  <a href="blogs.html" class="btn-visit align-self-start"
+                    >Đọc thêm</a
+                  >
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- /Blog Details Section -->
+    </main>
+
+    <footer id="footer" class="footer accent-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Bản quyền</span>
+            <strong class="px-1 sitename">Dương Tuấn Khang</strong>
+            <span></span>
+          </p>
+        </div>
+        <div class="social-links d-flex justify-content-center">
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+    >
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

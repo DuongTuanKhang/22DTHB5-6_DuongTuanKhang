@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Blog 7 - Node.js và Express.js</title>
+    <meta
+      name="description"
+      content="Khám phá Node.js và Express.js - nền tảng mạnh mẽ để xây dựng ứng dụng web backend hiện đại."
+    />
+    <meta name="keywords" content="Node.js, Express.js, Backend, JavaScript" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&family=Raleway:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body class="portfolio-details-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <h1 class="sitename">Lập trình Java & JavaScript</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="blogs.html">Trang chủ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title" data-aos="fade">
+        <div
+          class="container d-lg-flex justify-content-between align-items-center"
+        >
+          <h1 class="mb-2 mb-lg-0">Node.js và Express.js</h1>
+          <nav class="breadcrumbs">
+            <ol>
+              <li><a href="index.html">Trang chủ</a></li>
+              <li class="current">Blog 7</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <!-- End Page Title -->
+
+      <!-- Blog Details Section -->
+      <section id="portfolio-details" class="portfolio-details section">
+        <div class="container" data-aos="fade-up">
+          <div class="row justify-content-between gy-4 mt-4">
+            <div class="col-lg-8" data-aos="fade-up">
+              <div class="portfolio-description">
+                <h2>Node.js và Express.js là gì?</h2>
+                <p>
+                  <strong>Node.js</strong> là một môi trường chạy JavaScript
+                  phía server, cho phép bạn xây dựng các ứng dụng web hiệu năng
+                  cao và dễ mở rộng. Không giống như trình duyệt, Node.js chạy
+                  trên công cụ <strong>V8 Engine</strong> của Google, giúp mã
+                  JavaScript được biên dịch nhanh chóng thành mã máy. Điều này
+                  giúp Node.js có khả năng xử lý hàng nghìn kết nối đồng thời mà
+                  vẫn tiết kiệm tài nguyên hệ thống.
+                </p>
+
+                <p>
+                  <strong>Express.js</strong> là framework nhẹ, được xây dựng
+                  trên Node.js, cung cấp các công cụ và phương thức giúp lập
+                  trình viên dễ dàng định nghĩa route, xử lý request – response,
+                  và quản lý logic ứng dụng. Thay vì phải viết hàng trăm dòng
+                  code để thiết lập một server HTTP thủ công, bạn chỉ cần vài
+                  dòng đơn giản với Express.
+                </p>
+
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>
+                      “Nhờ Node.js và Express.js, tôi có thể xây dựng các ứng
+                      dụng backend mạnh mẽ chỉ với một ngôn ngữ duy nhất –
+                      JavaScript.”
+                    </span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <div>
+                    <img
+                      src="assets/img/avatar-blog.jpg"
+                      class="testimonial-img"
+                      alt=""
+                    />
+                    <h3>Dương Tuấn Khang</h3>
+                    <h4>Lập trình viên Java</h4>
+                  </div>
+                </div>
+
+                <p>
+                  Một điểm mạnh khác của Node.js là mô hình
+                  <strong>non-blocking I/O</strong>. Nghĩa là thay vì chờ một
+                  tác vụ hoàn thành (ví dụ: truy vấn cơ sở dữ liệu), Node.js có
+                  thể xử lý song song các tác vụ khác. Cơ chế này cực kỳ phù hợp
+                  với các ứng dụng cần xử lý real-time như chat, hệ thống thông
+                  báo, hay streaming dữ liệu.
+                </p>
+
+                <p>
+                  Hệ sinh thái phong phú của Node.js cho phép bạn sử dụng hàng
+                  nghìn gói <code>npm</code> để mở rộng tính năng — từ xác thực
+                  người dùng, upload file, đến kết nối cơ sở dữ liệu như MongoDB
+                  hoặc MySQL. Chỉ cần một dòng lệnh, bạn có thể cài đặt thư viện
+                  mình cần:
+                </p>
+
+                <pre><code>npm install express</code></pre>
+
+                <p>
+                  Dưới đây là một ví dụ cơ bản về cách tạo server đầu tiên với
+                  Express.js:
+                </p>
+
+                <pre><code>
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Xin chào từ Express.js!');
+});
+
+app.listen(3000, () => {
+  console.log('Server đang chạy tại http://localhost:3000');
+});
+          </code></pre>
+
+                <p>
+                  Chỉ với vài dòng code, bạn đã có thể khởi chạy một web server
+                  hoàn chỉnh. Express cũng hỗ trợ dễ dàng việc quản lý route,
+                  middleware, cookie, và thậm chí cả xác thực người dùng.
+                </p>
+
+                <p>
+                  Nếu bạn muốn trở thành lập trình viên
+                  <strong>fullstack</strong>, việc nắm vững Node.js và
+                  Express.js sẽ là một lợi thế lớn. Đây chính là bước đệm quan
+                  trọng để học các công nghệ hiện đại hơn như
+                  <strong>Next.js</strong> hoặc <strong>NestJS</strong>, giúp
+                  bạn phát triển ứng dụng quy mô lớn một cách chuyên nghiệp.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="portfolio-info">
+                <h3>Thông tin bài viết</h3>
+                <ul>
+                  <li><strong>Chủ đề</strong> Node.js và Express.js</li>
+                  <li><strong>Tác giả</strong> Blog Lập trình</li>
+                  <li><strong>Ngày đăng</strong> 07 Tháng 10, 2025</li>
+                  <a href="blogs.html" class="btn-visit align-self-start"
+                    >Đọc thêm</a
+                  >
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- /Blog Details Section -->
+    </main>
+
+    <footer id="footer" class="footer accent-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Bản quyền</span>
+            <strong class="px-1 sitename">Dương Tuấn Khang</strong>
+            <span></span>
+          </p>
+        </div>
+        <div class="social-links d-flex justify-content-center">
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+    >
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

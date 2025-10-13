@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Blog 8 - React.js cho Frontend</title>
+    <meta
+      name="description"
+      content="Tìm hiểu React.js - thư viện JavaScript phổ biến để xây dựng giao diện người dùng hiện đại."
+    />
+    <meta name="keywords" content="React.js, JavaScript, Frontend, UI" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&family=Raleway:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body class="portfolio-details-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <h1 class="sitename">Lập trình Java & JavaScript</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="blogs.html">Trang chủ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title" data-aos="fade">
+        <div
+          class="container d-lg-flex justify-content-between align-items-center"
+        >
+          <h1 class="mb-2 mb-lg-0">React.js cho Frontend</h1>
+          <nav class="breadcrumbs">
+            <ol>
+              <li><a href="index.html">Trang chủ</a></li>
+              <li class="current">Blog 8</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <!-- End Page Title -->
+
+      <!-- Blog Details Section -->
+      <section id="portfolio-details" class="portfolio-details section">
+        <div class="container" data-aos="fade-up">
+          <div class="row justify-content-between gy-4 mt-4">
+            <div class="col-lg-8" data-aos="fade-up">
+              <div class="portfolio-description">
+                <h2>Tại sao chọn React.js?</h2>
+
+                <p>
+                  <strong>React.js</strong> là thư viện JavaScript mã nguồn mở
+                  được phát triển bởi Facebook, dùng để xây dựng giao diện người
+                  dùng (UI) một cách linh hoạt và hiệu quả. React cho phép chia
+                  nhỏ ứng dụng thành các <strong>component</strong> độc lập,
+                  giúp tái sử dụng mã và dễ dàng mở rộng quy mô dự án.
+                </p>
+
+                <p>
+                  Một trong những điểm mạnh nổi bật của React là cơ chế
+                  <em>Virtual DOM</em> — thay vì thao tác trực tiếp lên DOM
+                  thật, React cập nhật một bản sao ảo và chỉ thay đổi những phần
+                  cần thiết. Cơ chế này giúp tối ưu hiệu năng, giảm thiểu việc
+                  render lại không cần thiết, mang lại trải nghiệm mượt mà cho
+                  người dùng.
+                </p>
+
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>
+                      “React.js giúp tôi phát triển giao diện nhanh chóng, dễ
+                      dàng quản lý và mở rộng ứng dụng web mà vẫn giữ hiệu năng
+                      tối ưu.”
+                    </span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <div>
+                    <img
+                      src="assets/img/avatar-blog.jpg"
+                      class="testimonial-img"
+                      alt=""
+                    />
+                    <h3>Dương Tuấn Khang</h3>
+                    <h4>Lập trình viên Java</h4>
+                  </div>
+                </div>
+
+                <p>
+                  React được viết bằng <strong>JSX</strong> – một cú pháp mở
+                  rộng của JavaScript cho phép bạn viết mã giống như HTML ngay
+                  trong code. JSX giúp việc xây dựng giao diện trở nên trực quan
+                  hơn:
+                </p>
+
+                <pre><code>
+function Welcome() {
+  return &lt;h1&gt;Xin chào, React!&lt;/h1&gt;;
+}
+          </code></pre>
+
+                <p>
+                  Ở ví dụ trên, bạn định nghĩa một <strong>component</strong> có
+                  tên <code>Welcome</code> và trả về một phần tử giao diện. Sau
+                  đó có thể dễ dàng tái sử dụng component này nhiều lần trong
+                  ứng dụng:
+                </p>
+
+                <pre><code>
+function App() {
+  return (
+    &lt;div&gt;
+      &lt;Welcome /&gt;
+      &lt;Welcome /&gt;
+    &lt;/div&gt;
+  );
+}
+          </code></pre>
+
+                <p>
+                  Bên cạnh đó, React còn có hai khái niệm cốt lõi:
+                  <strong>state</strong> và <strong>props</strong>.
+                  <em>State</em> là dữ liệu nội bộ của component, có thể thay
+                  đổi trong quá trình chạy. Còn <em>props</em> là dữ liệu được
+                  truyền từ component cha sang component con.
+                </p>
+
+                <p>
+                  Hệ sinh thái của React vô cùng mạnh mẽ với hàng loạt thư viện
+                  hỗ trợ:
+                </p>
+                <ul>
+                  <li>
+                    <strong>React Router</strong> – quản lý điều hướng trang.
+                  </li>
+                  <li>
+                    <strong>Redux</strong> hoặc <strong>Zustand</strong> – quản
+                    lý state tập trung.
+                  </li>
+                  <li><strong>Next.js</strong> – framework cho SEO và SSR.</li>
+                </ul>
+
+                <p>
+                  Cộng đồng React phát triển rất nhanh, được nhiều công ty lớn
+                  như Netflix, Airbnb, Meta, Shopee, Tiki sử dụng để xây dựng
+                  giao diện người dùng hiện đại. Ngoài ra, React cũng có thể
+                  dùng để phát triển ứng dụng di động thông qua
+                  <strong>React Native</strong>.
+                </p>
+
+                <p>
+                  Nếu bạn muốn trở thành lập trình viên
+                  <strong>Frontend chuyên nghiệp</strong>, React.js là kỹ năng
+                  không thể thiếu. Nó không chỉ giúp bạn hiểu sâu hơn về cách
+                  hoạt động của giao diện web mà còn mở ra cơ hội học các công
+                  nghệ tiên tiến khác như Next.js hoặc Remix.
+                </p>
+
+                <p>
+                  Hãy bắt đầu với những bài học cơ bản về component, props và
+                  state — sau đó thử tự xây dựng một ứng dụng nhỏ như
+                  <em>to-do list</em> hay <em>weather app</em> để hiểu rõ sức
+                  mạnh thực sự của React.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="portfolio-info">
+                <h3>Thông tin bài viết</h3>
+                <ul>
+                  <li><strong>Chủ đề</strong> React.js cho Frontend</li>
+                  <li><strong>Tác giả</strong> Blog Lập trình</li>
+                  <li><strong>Ngày đăng</strong> 08 Tháng 10, 2025</li>
+                  <a href="blogs.html" class="btn-visit align-self-start"
+                    >Đọc thêm</a
+                  >
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- /Blog Details Section -->
+    </main>
+
+    <footer id="footer" class="footer accent-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Bản quyền</span>
+            <strong class="px-1 sitename">Dương Tuấn Khang</strong>
+            <span></span>
+          </p>
+        </div>
+        <div class="social-links d-flex justify-content-center">
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+    >
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
