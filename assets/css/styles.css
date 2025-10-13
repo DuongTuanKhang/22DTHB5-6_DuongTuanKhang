@@ -1,6 +1,6 @@
 :root {
-  --default-font: "Poppins", system-ui, -apple-system, "Segoe UI",
-    "Helvetica Neue", Arial, sans-serif;
+  --default-font: "Fira Code", "JetBrains Mono", "Source Code Pro", "Poppins",
+    system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --heading-font: "Poppins", sans-serif;
   --nav-font: "Poppins", sans-serif;
 }
@@ -1290,10 +1290,12 @@ section,
 
 .portfolio-details .portfolio-description .testimonial-item .testimonial-img {
   width: 90px;
-  border-radius: 50px;
+  height: 90px;
+  border-radius: 50%;
   border: 6px solid var(--background-color);
   float: left;
   margin: 0 10px 0 0;
+  object-fit: cover;
 }
 
 .portfolio-details .portfolio-description .testimonial-item h3 {
